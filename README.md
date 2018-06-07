@@ -1,4 +1,7 @@
 ### 简单易懂的Vue数据绑定源码解读
+![GitHub][github]
+
+[github]: https://user-gold-cdn.xitu.io/2017/5/23/6187ce83f3cf77f8ec107289ccd28b31?imageView2/0/w/1280/h/960/format/webp/ignore-error/1
 一.准备
 在分析源码之前，我先说两个关于数据绑定相关的知识点：
 
