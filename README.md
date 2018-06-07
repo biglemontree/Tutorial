@@ -70,3 +70,20 @@ dep.subs.push(c)
 // 发布者发布
 obj.pub(dep)
 ```
+在这段代码中，obj是发布者，Watcher实例是订阅者，Dep用来储存订阅者，以及接受发布者通知的一个媒介
+
+### proxy（es6）实现
+
+```
+var nameProxy = new Proxy({
+			name: 'cyx'
+		}, {
+			get: function (target, key, value) {
+				return target[key];
+			},
+			set: function (target, key, value) {
+				target[key] = value;
+			}
+		});
+
+```
