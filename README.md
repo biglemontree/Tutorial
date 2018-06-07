@@ -26,4 +26,4 @@ obj.a = 1
 
 2. 订阅者模式：订阅者模式也叫“订阅-发布者模式”，对于前端来说这种模式简直无处不在，比如我们常用的xx.addEventListener('click',cb,false)就是一个订阅者，它订阅了click事件，当在页面触发时，浏览器会作为发布者告诉你，可以执行click的回调函数cb了。
 
-<h1 id='title'>改变我</h1>
+<div id='title'>改变我</div>
