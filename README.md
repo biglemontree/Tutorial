@@ -1,17 +1,14 @@
-### 简单易懂的双向数据绑定解读
+## 简单易懂的双向数据绑定解读
 ![GitHub][github]
 
 [github]: https://user-gold-cdn.xitu.io/2017/5/23/6187ce83f3cf77f8ec107289ccd28b31?imageView2/0/w/1280/h/960/format/webp/ignore-error/1
 
 数据更新视图的重点是如何知道数据变了，只要知道数据变了，那么接下去的事都好处理。如何知道数据变了，就是通过Object.defineProperty( )对属性设置一个set函数，当数据改变了就会来触发这个函数，所以我们只要将一些需要更新的方法放在这里面就可以实现data更新view了
 ![vue][vue]
-
 [vue]: https://images2015.cnblogs.com/blog/938664/201705/938664-20170522230647382-1643499691.jpg
 
-一.准备
-在分析源码之前，我先说两个关于数据绑定相关的知识点：
-
-1. 对象的访问器属性——getter和setter：
+### 实现一个Observer
+Observer是一个数据监听器，其实现核心方法就是前文所说的Object.defineProperty( )。如果要对所有属性都进行监听的话，那么可以通过递归方法遍历所有属性值，并对其进行Object.defineProperty( )处理。如下代码，实现了一个Observer。
 
 Object有一个名为defineProperty的方法，可以设置访问器属性，比如：
 ```
