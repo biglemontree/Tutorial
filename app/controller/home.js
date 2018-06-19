@@ -9,10 +9,12 @@ const {
 const bodyParser = require('koa-bodyparser')
 const Controller = require('egg').Controller;
 const Db = require('../models/index')
-console.log('Db', Db.Sequelize);
-Db.Sequelize.User.create({
-    nickname: 'janedoe',
-})
+const User = require('../models/user')
+console.log('Db', User);
+
+// Db.Users.create({
+//     nickname: 'janedoe',
+// })
 // app.use(bodyParser())
 let sessionKey
 class HomeController extends Controller {
