@@ -1,3 +1,4 @@
+// test
 var crypto = require('crypto')
 
 function WXBizDataCrypt(appId, sessionKey) {
