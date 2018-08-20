@@ -28,7 +28,7 @@ class HomeController extends Controller {
     }
 
     async login(ctx) {
-        // 	let request = ctx.request
+        // let request = ctx.request
         // let req_query = request.query
         // let req_querystring = request.querystring
         // 获取code-> 请求微信接口->获取session_key 和 openId
@@ -75,9 +75,9 @@ class HomeController extends Controller {
             console.log('解密后 data: ', data)
             var token = uuidv4()
             console.log(token, 'token');
-            Db.User.create({
-                nickname: 'janedoe',
-            })
+            // Db.User.create({
+            //     nickname: 'janedoe',
+            // })
             this.ctx.body = {
                 code: 0,
                 data: data,
